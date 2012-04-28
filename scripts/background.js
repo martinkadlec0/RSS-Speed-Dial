@@ -6,7 +6,6 @@ require(['ajax.mod', 'mustache', 'text!item.tpl', 'domReady!'], function(AJAX, M
 		b = d.body
 	;
 
-	sd.title = 'iDNES';
 	loadRSS();
 	setInterval(loadRSS, 15e4);
 	setInterval(scrollWindow, 1e4);
@@ -25,6 +24,7 @@ require(['ajax.mod', 'mustache', 'text!item.tpl', 'domReady!'], function(AJAX, M
 			};
 		});
 		sd.url = data.items[0].url;
+		sd.title = e.XML.querySelector('channel title').textContent;
 		b.innerHTML = Mustache.render(template, data);
 	}
 
