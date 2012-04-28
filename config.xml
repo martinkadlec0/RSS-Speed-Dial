@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" id="http://my.opera.com/BS-Harou/blog/rss-speed-dial" defaultlocale="en" viewmodes="minimized">
+  <name short="Forrst notifier">RSS Speed Dial</name>
+  <description>This extension shows RSS titles in speed dial item</description>
+  <author href="http://my.opera.com/BS-Harou/blog">BS-Harou (Martin Kadlec)</author>
+  <access origin="*" subdomains="true" />
+  <feature name="opera:speeddial" required="true">
+    <param name="url" value="http://opera.com/"/>
+  </feature>
+</widget>
