@@ -1,0 +1,99 @@
+@charset 'UTF-8';
+
+html, body {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	background: #eee;
+}
+body {
+	margin: 0px;
+}
+.oneline() {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.item {
+	width: 100%;
+	font-family: "Trebuchet MS";
+
+	.date {
+		display: none;
+	}
+
+	&:not(:first-child) {
+		background: #222;
+		box-shadow: 0px 0px 5px black;
+
+		.title {
+			font-size: 14px;
+			color: white;
+			padding: 5px 10px;
+			.oneline();
+		}
+	}
+
+	&:first-child {
+		background: white;
+		min-height: 100px;
+		height: 50%;
+		overflow: hidden;
+
+		.title {
+			padding: 10px;
+			font-size: 18px;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		.date {
+			text-align: center;
+			padding: 5px;
+			font-size: 11px;
+			text-shadow: 1px 0 0 white;
+			background: orange;
+			display: block;
+			.oneline();
+		}
+	}
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 140px) { 
+	.item:first-child {
+		.title {
+			padding: 5px 10px;
+			font-size: 12px;
+		}
+		.date {
+			display: none;
+		}
+	}
+}
+
+
+@media screen and (min-width: 140px) and (max-width: 220px) { 
+	.item:first-child {
+		.title {
+			padding: 5px 10px;
+			font-size: 15px;
+		}
+		.date {
+			padding: 2px 5px;
+			font-size: 10px;
+		}
+	}
+}
+
+@media screen and (min-width: 220px) and (max-width: 320px) { 
+	.item:first-child {
+		.title {
+			padding: 5px 10px;
+			font-size: 15px;
+		}
+		.date {
+			padding: 4px 5px;
+		}
+	}
+}
